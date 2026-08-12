@@ -1,0 +1,111 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply bg-ink text-canvas font-body antialiased;
+}
+
+::selection {
+  @apply bg-magenta text-canvas;
+}
+
+/* Visible keyboard focus everywhere, print-registration style */
+:focus-visible {
+  outline: 2px solid theme('colors.cyan');
+  outline-offset: 3px;
+}
+
+/* Registration crosshair — used as a structural marker at real alignment points,
+   not decoration: corners of sections / cards, like a printer's reg mark. */
+.reg-mark {
+  position: relative;
+  width: 14px;
+  height: 14px;
+  flex-shrink: 0;
+}
+.reg-mark::before,
+.reg-mark::after {
+  content: '';
+  position: absolute;
+  background: currentColor;
+}
+.reg-mark::before {
+  left: 50%;
+  top: 0;
+  width: 1px;
+  height: 100%;
+  transform: translateX(-50%);
+}
+.reg-mark::after {
+  top: 50%;
+  left: 0;
+  height: 1px;
+  width: 100%;
+  transform: translateY(-50%);
+}
+.reg-mark-circle {
+  position: absolute;
+  inset: 2px;
+  border: 1px solid currentColor;
+  border-radius: 9999px;
+}
+
+/* Halftone dot field, density controllable via background-size */
+.halftone {
+  background-image: radial-gradient(currentColor 1.2px, transparent 1.2px);
+  background-size: 7px 7px;
+}
+
+/* Fixed-tone halftone for the paper/canvas section — independent of
+   descendant text colour so it never fights the cascade. */
+.halftone-paper {
+  background-image: radial-gradient(rgba(28, 28, 30, 0.08) 1.2px, transparent 1.2px);
+  background-size: 7px 7px;
+}
+
+/* CMYK colour-separation text: four offset copies of the same text that
+   snap into registration on load. Respects reduced-motion. */
+.sep-text {
+  position: relative;
+  display: inline-block;
+}
+.sep-text .sep-layer {
+  position: absolute;
+  inset: 0;
+  mix-blend-mode: screen;
+}
+.sep-c { color: #00B7C3; }
+.sep-m { color: #E8447A; }
+.sep-y { color: #F5C400; }
+
+@keyframes snap-c {
+  0% { transform: translate(-14px, 6px); }
+  100% { transform: translate(0, 0); }
+}
+@keyframes snap-m {
+  0% { transform: translate(12px, -8px); }
+  100% { transform: translate(0, 0); }
+}
+@keyframes snap-y {
+  0% { transform: translate(-6px, -10px); }
+  100% { transform: translate(0, 0); }
+}
+.sep-c { animation: snap-c 1.1s cubic-bezier(0.16, 1, 0.3, 1) both; }
+.sep-m { animation: snap-m 1.1s cubic-bezier(0.16, 1, 0.3, 1) both; animation-delay: 0.06s; }
+.sep-y { animation: snap-y 1.1s cubic-bezier(0.16, 1, 0.3, 1) both; animation-delay: 0.12s; }
+
+@media (prefers-reduced-motion: reduce) {
+  .sep-c, .sep-m, .sep-y {
+    animation: none !important;
+    transform: none !important;
+  }
+  * {
+    animation-duration: 0.001ms !important;
+    transition-duration: 0.001ms !important;
+  }
+}
