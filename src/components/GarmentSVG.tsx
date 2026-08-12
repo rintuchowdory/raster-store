@@ -71,6 +71,9 @@ export function GarmentSVG({ garment, color, patternId, bg }: GarmentSVGProps) {
       {isHoodie ? (
         <>
           <rect x="68" y="14" width="64" height="48" rx="28" fill={`url(#${dotId})`} />
+          {/* varsity ribbing stripe across the chest */}
+          <rect x="55" y="78" width="90" height="5" fill={bg} opacity="0.85" />
+          <rect x="55" y="86" width="90" height="2.5" fill={bg} opacity="0.5" />
           <rect
             x="80"
             y="150"

@@ -16,7 +16,7 @@ export function ProductCard({ product }: { product: Product }) {
       </div>
 
       {product.limited && (
-        <span className="absolute right-3 top-3 z-10 bg-magenta px-2 py-1 font-mono text-[10px] uppercase tracking-widest text-canvas">
+        <span className="absolute right-3 top-3 z-10 bg-maroon px-2 py-1 font-mono text-[10px] uppercase tracking-widest text-canvas">
           Small batch
         </span>
       )}
@@ -32,7 +32,7 @@ export function ProductCard({ product }: { product: Product }) {
 
       <div className="flex flex-1 flex-col gap-3 border-t border-charcoal/10 p-4">
         <div className="flex items-start justify-between gap-2">
-          <h3 className="font-display text-lg leading-none text-charcoal">
+          <h3 className="font-display text-lg font-bold leading-none text-charcoal">
             {product.name}
           </h3>
           <span className="font-mono text-[10px] text-charcoal/40">{product.sku}</span>
@@ -91,7 +91,7 @@ export function ProductCard({ product }: { product: Product }) {
                 <span className="mr-2 text-charcoal/40 line-through">
                   €{product.price}
                 </span>
-                <span className="text-magenta">€{product.salePrice}</span>
+                <span className="text-maroon">€{product.salePrice}</span>
               </>
             ) : (
               <span>€{product.price}</span>
@@ -101,7 +101,7 @@ export function ProductCard({ product }: { product: Product }) {
           <button
             type="button"
             onClick={() => addToCart(product, color.name, size)}
-            className="bg-charcoal px-3 py-2 font-mono text-[10px] uppercase tracking-widest text-canvas transition-colors hover:bg-cyan hover:text-charcoal"
+            className="bg-charcoal px-3 py-2 font-mono text-[10px] uppercase tracking-widest text-canvas transition-colors hover:bg-gold hover:text-charcoal"
           >
             Add to cart
           </button>

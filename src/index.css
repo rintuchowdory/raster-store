@@ -11,12 +11,12 @@ body {
 }
 
 ::selection {
-  @apply bg-magenta text-canvas;
+  @apply bg-maroon text-canvas;
 }
 
 /* Visible keyboard focus everywhere, print-registration style */
 :focus-visible {
-  outline: 2px solid theme('colors.cyan');
+  outline: 2px solid theme('colors.gold');
   outline-offset: 3px;
 }
 
@@ -79,9 +79,9 @@ body {
   inset: 0;
   mix-blend-mode: screen;
 }
-.sep-c { color: #00B7C3; }
-.sep-m { color: #E8447A; }
-.sep-y { color: #F5C400; }
+.sep-c { color: #34507A; }
+.sep-m { color: #7A2331; }
+.sep-y { color: #C9A227; }
 
 @keyframes snap-c {
   0% { transform: translate(-14px, 6px); }

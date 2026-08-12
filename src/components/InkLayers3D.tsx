@@ -12,9 +12,9 @@ function InkBlob() {
     <mesh ref={ref}>
       <icosahedronGeometry args={[1.35, 6]} />
       <MeshDistortMaterial
-        color="#0B0B0C"
+        color="#141B2E"
         roughness={0.25}
-        metalness={0.4}
+        metalness={0.45}
         distort={0.38}
         speed={1.6}
       />
@@ -57,19 +57,19 @@ function Scene() {
   return (
     <>
       <ambientLight intensity={0.6} />
-      <pointLight position={[4, 3, 4]} intensity={40} color="#00B7C3" />
-      <pointLight position={[-4, -2, 3]} intensity={40} color="#E8447A" />
-      <pointLight position={[0, 4, -3]} intensity={20} color="#F5C400" />
+      <pointLight position={[4, 3, 4]} intensity={40} color="#34507A" />
+      <pointLight position={[-4, -2, 3]} intensity={40} color="#7A2331" />
+      <pointLight position={[0, 4, -3]} intensity={22} color="#C9A227" />
 
-      <ScreenPlane color="#00B7C3" position={[-0.9, 0.4, -0.6]} rotationSpeed={0.12} />
-      <ScreenPlane color="#E8447A" position={[0.8, -0.3, -0.4]} rotationSpeed={-0.09} />
-      <ScreenPlane color="#F5C400" position={[0.1, 0.7, -1]} rotationSpeed={0.07} size={2} />
+      <ScreenPlane color="#34507A" position={[-0.9, 0.4, -0.6]} rotationSpeed={0.12} />
+      <ScreenPlane color="#7A2331" position={[0.8, -0.3, -0.4]} rotationSpeed={-0.09} />
+      <ScreenPlane color="#C9A227" position={[0.1, 0.7, -1]} rotationSpeed={0.07} size={2} />
 
       <Float speed={1.2} rotationIntensity={0.4} floatIntensity={1}>
         <InkBlob />
       </Float>
 
-      <Sparkles count={60} scale={4.5} size={2} speed={0.25} color="#EDE9DE" opacity={0.5} />
+      <Sparkles count={60} scale={4.5} size={2} speed={0.25} color="#C9A227" opacity={0.45} />
 
       <OrbitControls
         enableZoom={false}
@@ -85,7 +85,7 @@ function Scene() {
 
 export function InkLayers3D() {
   return (
-    <div className="w-full h-full" role="img" aria-label="Rotating 3D animation of layered cyan, magenta and yellow print screens around a distorting ink blob">
+    <div className="w-full h-full" role="img" aria-label="Rotating 3D animation of layered navy, maroon and gold print screens around a distorting ink blob">
       <Canvas
         dpr={[1, 1.5]}
         camera={{ position: [0, 0, 5], fov: 45 }}

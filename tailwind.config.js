@@ -4,17 +4,20 @@ export default {
   theme: {
     extend: {
       colors: {
-        ink: '#0B0B0C',
-        'ink-soft': '#151517',
-        canvas: '#EDE9DE',
-        'canvas-line': '#D9D3C3',
-        charcoal: '#1C1C1E',
+        ink: '#141B2E',
+        'ink-soft': '#1C2540',
+        canvas: '#EFE7D3',
+        'canvas-line': '#DCCFAE',
+        charcoal: '#241C15',
         cyan: '#00B7C3',
         magenta: '#E8447A',
         yellow: '#F5C400',
+        navy: '#141B2E',
+        maroon: '#7A2331',
+        gold: '#C9A227',
       },
       fontFamily: {
-        display: ['"Anton"', 'sans-serif'],
+        display: ['"Big Shoulders Display"', 'sans-serif'],
         body: ['"Archivo"', 'sans-serif'],
         mono: ['"Space Mono"', 'monospace'],
       },

@@ -28,7 +28,7 @@ export function CartDrawer() {
             aria-label="Shopping cart"
           >
             <div className="flex items-center justify-between border-b border-charcoal/10 p-5">
-              <h2 className="font-display text-2xl uppercase">Your cart</h2>
+              <h2 className="font-display text-2xl font-black uppercase">Your cart</h2>
               <button
                 type="button"
                 onClick={closeCart}
@@ -74,7 +74,7 @@ export function CartDrawer() {
 
                         <div className="flex flex-1 flex-col gap-1">
                           <div className="flex items-start justify-between gap-2">
-                            <p className="font-display text-base leading-none">
+                            <p className="font-display text-base font-bold leading-none">
                               {line.product.name}
                             </p>
                             <span className="font-mono text-sm">
@@ -108,7 +108,7 @@ export function CartDrawer() {
                             <button
                               type="button"
                               onClick={() => removeLine(line.lineId)}
-                              className="font-mono text-[11px] uppercase tracking-widest text-charcoal/40 hover:text-magenta"
+                              className="font-mono text-[11px] uppercase tracking-widest text-charcoal/40 hover:text-maroon"
                             >
                               Remove
                             </button>
@@ -129,7 +129,7 @@ export function CartDrawer() {
               <button
                 type="button"
                 disabled={lines.length === 0}
-                className="w-full bg-charcoal py-3 font-mono text-xs uppercase tracking-widest text-canvas transition-colors hover:bg-cyan hover:text-charcoal disabled:cursor-not-allowed disabled:opacity-30 disabled:hover:bg-charcoal disabled:hover:text-canvas"
+                className="w-full bg-charcoal py-3 font-mono text-xs uppercase tracking-widest text-canvas transition-colors hover:bg-gold hover:text-charcoal disabled:cursor-not-allowed disabled:opacity-30 disabled:hover:bg-charcoal disabled:hover:text-canvas"
               >
                 Checkout
               </button>

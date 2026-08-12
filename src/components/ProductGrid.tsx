@@ -21,7 +21,7 @@ function Section({
         <span className="reg-mark text-charcoal/50">
           <span className="reg-mark-circle" />
         </span>
-        <h2 className="font-display text-2xl uppercase tracking-wide text-charcoal">
+        <h2 className="font-display text-2xl font-black uppercase tracking-wide text-charcoal">
           {meta.label}
         </h2>
         <span className="font-mono text-xs text-charcoal/40">
@@ -49,7 +49,7 @@ export function ProductGrid({ products }: { products: Product[] }) {
           <p className="font-mono text-xs uppercase tracking-widest text-charcoal/50">
             Current drop
           </p>
-          <h2 className="mt-2 font-display text-4xl uppercase text-charcoal sm:text-5xl">
+          <h2 className="mt-2 font-display text-4xl font-black uppercase text-charcoal sm:text-5xl">
             Off the press
           </h2>
         </div>

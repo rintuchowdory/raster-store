@@ -13,9 +13,13 @@ rather than generic ecommerce chrome:
   structural device, standing in for numbered steps — they mark real
   positions (print placement on a garment, section anchors) the way a
   printer's registration mark does.
-- **CMY process colours** (cyan `#00B7C3`, magenta `#E8447A`, yellow
-  `#F5C400`) are the only accents, each with one job: cyan for primary
-  actions, magenta for sale/limited badges, yellow for highlights.
+- **Campus-press palette**: navy `#141B2E`, maroon `#7A2331`, and gold
+  `#C9A227` stand in for the press's three inks — navy is the base, maroon
+  marks sale/limited badges, gold is the one CTA/highlight colour. Headlines
+  run in Big Shoulders Display (a collegiate, stadium-banner condensed
+  face), paired with a circular **crest** (`src/components/Crest.tsx`) built
+  from crossed squeegees — the shop's own tools standing in for the crossed
+  rifles/oars on a classic varsity seal.
 - The hero headline is built from four offset copies of the same text that
   snap into alignment on load — literally a colour-separation registration
   animation (`src/index.css`, `.sep-text`). It's skipped for
@@ -25,7 +29,7 @@ rather than generic ecommerce chrome:
   (`src/components/GarmentSVG.tsx`) — there are no real product photos to
   shoot yet, so the print process itself becomes the visual.
 - The hero 3D piece (`src/components/InkLayers3D.tsx`, React Three Fiber) is
-  a distorting "ink blob" core with three translucent CMY planes orbiting it
+  a distorting "ink blob" core with three translucent navy/maroon/gold planes orbiting it
   — drag to rotate, it auto-rotates slowly on its own.
 
 ## Stack

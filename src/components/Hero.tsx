@@ -1,18 +1,17 @@
 import { InkLayers3D } from './InkLayers3D'
+import { Crest } from './Crest'
 
 export function Hero() {
   return (
-    <section id="top" className="relative overflow-hidden border-b border-white/10">
+    <section id="top" className="relative overflow-hidden border-b-2 border-gold/30">
       <div className="mx-auto grid max-w-6xl items-center gap-10 px-5 pb-16 pt-14 sm:px-8 md:grid-cols-2 md:pt-20">
         <div>
           <div className="mb-6 flex items-center gap-3 font-mono text-xs uppercase tracking-widest text-canvas/50">
-            <span className="reg-mark">
-              <span className="reg-mark-circle" />
-            </span>
-            4-colour drop · Cologne, DE
+            <Crest id="hero-crest" className="h-8 w-8 text-gold/70" />
+            Class of print · Cologne, DE
           </div>
 
-          <h1 className="sep-text font-display text-[15vw] leading-[0.92] text-canvas sm:text-6xl md:text-7xl">
+          <h1 className="sep-text font-display font-black text-[15vw] leading-[0.92] text-canvas sm:text-6xl md:text-7xl">
             <span className="relative z-10">PRINTED
               <br />
               TO ORDER
@@ -31,13 +30,13 @@ export function Hero() {
           <div className="mt-8 flex flex-wrap items-center gap-4">
             <a
               href="#tee"
-              className="bg-canvas px-6 py-3 font-mono text-xs uppercase tracking-widest text-ink transition-colors hover:bg-cyan"
+              className="bg-gold px-6 py-3 font-mono text-xs uppercase tracking-widest text-ink transition-colors hover:bg-canvas"
             >
               Shop the drop
             </a>
             <a
               href="#about"
-              className="border border-white/20 px-6 py-3 font-mono text-xs uppercase tracking-widest text-canvas/80 transition-colors hover:border-canvas hover:text-canvas"
+              className="border border-gold/30 px-6 py-3 font-mono text-xs uppercase tracking-widest text-canvas/80 transition-colors hover:border-gold hover:text-gold"
             >
               How we print
             </a>
